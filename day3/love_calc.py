@@ -39,4 +39,3 @@ def love_calc():
         return print(f'Your score is {final_score}')
         
 love_calc()
-
