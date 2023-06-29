@@ -5,7 +5,6 @@ def love_calc():
     score1 = 0 
     score2 = 0
 
-    
     print('Welcome to the Love Calculator!')
     name1 = input('What is your name? \n').lower()
     name2 = input('What is their name? \n').lower()
