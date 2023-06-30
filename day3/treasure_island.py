@@ -1,4 +1,5 @@
 def treasure_island():
+    
     print('''
     *******************************************************************************
              |                   |                  |                     |
@@ -50,9 +51,4 @@ def treasure_island():
     else:
         print('You fall into a hole.  Game Over')
     
-
-
 treasure_island()
-
-
-
