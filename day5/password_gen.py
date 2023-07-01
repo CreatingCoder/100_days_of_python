@@ -29,6 +29,6 @@ def password_gen():
 
         final_string = ''.join(random.sample(final_string,len(final_string)))
 
-    print(f'Your randomized password is: {final_string}')
+    print(f'Your pseudo-randomized password is: {final_string}')
 
 password_gen()
