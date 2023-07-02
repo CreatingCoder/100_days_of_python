@@ -7,7 +7,6 @@ def hangman():
     for j in range(0,6):
         userInput = input('Please guess a letter:')
 
-
         for i in word:
 
             if(i == userInput):
@@ -19,8 +18,7 @@ def hangman():
         print(f'You now have used {miss_count} of your 6 tries')
         miss_count = miss_count + 1
 
-        
-    
+     
 def hangman_none():
     print('\n _______')
     print('|       |')
@@ -98,16 +96,5 @@ def hangman_five():
     print('|')
     print('|')
     print('____________')
-   
-    
-
-
-
-
-
-
-
-
 
 hangman()
-  
