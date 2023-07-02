@@ -13,11 +13,9 @@ def hangman():
                 print(i,end = "")
             else:
                 print('_', end ="")
-                
-                
+                      
         print(f'You now have used {miss_count} of your 6 tries')
         miss_count = miss_count + 1
-
      
 def hangman_none():
     print('\n _______')
