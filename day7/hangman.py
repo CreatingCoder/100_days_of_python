@@ -41,9 +41,6 @@ def hangman():
            break
 
         print(output)
-    
-
-
 
 def hangman_output(w2g, logl):
     output = ''
@@ -137,7 +134,3 @@ def hangman_six():
     print('____________')
 
 hangman()
-
-
-
-
