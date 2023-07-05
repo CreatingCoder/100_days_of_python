@@ -31,6 +31,3 @@ elif(direction == 'decode'):
     decrypt(encrypted_text = text, shift_amount = shift)
     
     
-
-
-    
