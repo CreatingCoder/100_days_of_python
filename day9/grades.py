@@ -24,6 +24,3 @@ for key in student_grades:
         student_grades[key] = 'Failed'
 
 print(student_grades)
-
-
-
