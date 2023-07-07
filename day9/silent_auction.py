@@ -15,7 +15,7 @@ def silent_auction():
 
         next = input('Is there anyone else who wants to bid?  Type "yes" or "no": ').lower()
 
-        #if next == 'yes': 
+        #clears the screen for the next user
         os.system('clear')
 
         if next == 'yes':
