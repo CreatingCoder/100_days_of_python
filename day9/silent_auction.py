@@ -30,5 +30,4 @@ def silent_auction():
 
     print(f'\n{winner} won the silent auction with a high bid of {winning_bid}!')
 
-
 silent_auction()
