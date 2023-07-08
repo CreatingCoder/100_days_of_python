@@ -44,8 +44,9 @@ def run(card_count, players_cards, comp_shown_card):
         card_count = card_count + 1 
         run(card_count, players_cards, comp_shown_card)
     
-    elif(hit_me == 'n'):
-        return players_cards[:card_count]
+    
+    return players_cards[:card_count]
+        
     
     #return print('yeet')
 
