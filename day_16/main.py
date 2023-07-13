@@ -3,7 +3,6 @@ from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
 run = True
-
 cm = CoffeeMaker()
 menu = Menu()
 mm = MoneyMachine()
