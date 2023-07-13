@@ -22,13 +22,5 @@ while run == True:
 
     drink_order = menu.find_drink(userinput)
     
-
     if cm.is_resource_sufficient(drink_order) == True and mm.make_payment(drink_order.cost):
         cm.make_coffee(drink_order)
-
-    
-
-
-        
-
-    
