@@ -5,15 +5,14 @@ from money_machine import MoneyMachine
 
 run = True
 
+cm = CoffeeMaker()
+menu = Menu()
+mm = MoneyMachine()
+
 while run == True:
-    cm = CoffeeMaker()
-    menu = Menu()
-    
-    mm = MoneyMachine()
 
     userinput = input(f'What would you like?  {menu.get_items()}: ').lower()
 
-    
 
     if(userinput == 'off'):
         exit()
@@ -24,16 +23,10 @@ while run == True:
     drink_order = menu.find_drink(userinput)
     
 
+    if cm.is_resource_sufficient(drink_order) == True and mm.make_payment(drink_order.cost):
+        cm.make_coffee(drink_order)
+
     
-
-
-    if cm.is_resource_sufficient(drink_order) == True:
-        #print(menu_item.cost)
-        print
-        #get cost of drink
-        
-
-        #mm.make_payment()
 
 
         
