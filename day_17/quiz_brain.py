@@ -13,7 +13,6 @@ class QuizBrain():
         self.score = 0
 
 
-
 #retrieve the item at the current question_number from the question_list
 #user the input() function to show the user the Question text and ask for the user's answer
     def next_question(self):
