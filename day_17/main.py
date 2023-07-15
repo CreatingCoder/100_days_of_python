@@ -17,22 +17,3 @@ while qb.still_has_questions():
 
 print(f'Done with the quiz!  Your final score is {qb.score}/{len(question_bank)}')
 
-
-
-
-
-    
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
