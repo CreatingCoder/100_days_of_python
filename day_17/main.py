@@ -8,9 +8,7 @@ for i in question_data:
     q = Question(i['text'], i['answer'])
     question_bank.append(q)
 
-   
 qb = QuizBrain(question_bank)
-
 
 while qb.still_has_questions():
     qb.next_question()
