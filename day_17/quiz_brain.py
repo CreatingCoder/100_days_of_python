@@ -6,12 +6,10 @@
 
 class QuizBrain():
 
-
     def __init__(self,  q_list):
         self.question_number = 0 
         self.question_list = q_list
         self.score = 0
-
 
 #retrieve the item at the current question_number from the question_list
 #user the input() function to show the user the Question text and ask for the user's answer
@@ -21,14 +19,12 @@ class QuizBrain():
         user_input = input(f'Question {self.question_number}: {curr_question.text} True or False?')
         self.check_answer(user_input, curr_question.answer)
         
-
     def still_has_questions(self):
         if(self.question_number < len(self.question_list)):
             return True
         else:
             return False
-        
-    
+           
     def check_answer(self, user_input, correct_answer):
         if user_input.lower() == correct_answer.lower():
             print('Correct')
