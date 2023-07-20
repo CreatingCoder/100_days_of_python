@@ -12,6 +12,5 @@ def guess_word():
         else:
             print('_', end = ' ')
 
-    
 
 guess_word()
