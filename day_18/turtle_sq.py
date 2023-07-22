@@ -13,7 +13,6 @@ for i in range(4):
         t.forward(25)
     t.right(90)
 
-
 #create screen 
 scr = Screen()
 scr.exitonclick()
