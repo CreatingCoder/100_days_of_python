@@ -18,21 +18,21 @@ rand = Random()
 t.pensize(width = 5)
 t.shapesize(stretch_wid=.5)
 
-rand_color = rand.randint(0,9)
-t.color(color_list[rand_color])
 
-for i in range(18):
-    #rand_int = rand.randint(0,3)
-    t.forward(20)
-    t.right(20) #dir[rand_int]
 
-#moves circle starting point
-t.right(10)
+for i in range(200):
+  rand_color = rand.randint(0,9)
+  t.color(color_list[rand_color])
+  for i in range(18):
+      #rand_int = rand.randint(0,3)
+      t.forward(20)
+      t.right(20) #dir[rand_int]
 
-for i in range(18):
-  #rand_int = rand.randint(0,3)
-  t.forward(20)
-  t.right(20) #dir[rand_int]
+  #moves circle starting point
+  t.right(10)
+  t.back(10)
+
+
 
 
 
