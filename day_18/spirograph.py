@@ -32,19 +32,6 @@ for i in range(200):
   t.right(10)
   t.back(10)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #create screen 
 scr = Screen()
 scr.exitonclick()
