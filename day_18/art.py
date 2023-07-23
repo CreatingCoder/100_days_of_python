@@ -1,8 +1,5 @@
 import random as rand
 
-##kinda yucky code, eventually can come back and clean up the method calling processes
-
-
 from turtle import Turtle, Screen
 from turns import *
 
@@ -37,8 +34,6 @@ def right_move():
     t.setheading(0)
     t.color(colors[rand.randint(0, len(colors) -1 )])
     t.stamp()
-
-
 
 #goes to upperleft corner
 t.setposition(-300, 255)
