@@ -12,13 +12,8 @@ t = Turtle()
 #create random inst
 rand = Random()
 
-#shape and color
-#t.shape('circle')
-
 t.pensize(width = 5)
 t.shapesize(stretch_wid=.5)
-
-
 
 for i in range(200):
   rand_color = rand.randint(0,9)
