@@ -70,13 +70,6 @@ draw_dots()
 
 
 
-
-
-
-
-
-
-
 scr.exitonclick()
 
 
