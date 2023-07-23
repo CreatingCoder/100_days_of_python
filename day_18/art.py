@@ -64,12 +64,6 @@ right_move()
 draw_dots()
 
 
-
-
-
-
-
-
 scr.exitonclick()
 
 
