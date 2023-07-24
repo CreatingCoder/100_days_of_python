@@ -30,5 +30,4 @@ scr.onkey(left, "Left")
 scr.onkey(right, "Right")
 scr.listen()
 
-
 scr.exitonclick()
