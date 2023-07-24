@@ -24,14 +24,11 @@ def left():
     t.setheading(180)
     t.forward(30)
 
-
 scr.onkey(up, "Up")
 scr.onkey(down, "Down")
 scr.onkey(left, "Left")
 scr.onkey(right, "Right")
 scr.listen()
 
-
-#create screen 
 
 scr.exitonclick()
