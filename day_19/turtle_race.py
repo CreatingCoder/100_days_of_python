@@ -7,9 +7,10 @@ color_list = ['red', 'orange', 'yellow', 'green', 'blue',
   'purple', 'pink', 'brown', 'gray', 'gold']
 
 pos = -280
-
 bet = ''
-winning_turtle =0
+end = False
+winning_turtle = ''
+
 scr.textinput(bet, 'What turtle will win?')
 
 turtle_obj = [None] * 10
@@ -23,24 +24,26 @@ for i in range(10):
 
 
 for k in range(25):
+  if end == True:
+     break
   for j in range(10):
+
       turtle_obj[j].forward(rand.randint(0,40))
-     # print(turtle_obj[j].xcor())
       
       if turtle_obj[j].xcor() >150 :
-         print(f'Turtle number {turtle_obj[j]} won!!')
+         print(f'Turtle number {j} won!!')
+         winning_turtle = j + 1
          print(turtle_obj[j].xcor())
-         break
+         end = True
+         break      
+
+if bet == winning_turtle:
+   print('You won!')
+
+else:
+   print('You lost!')
       
 
-# for ttl in turtle_obj:
-#    if winning_turtle < ttl.pos:
-#       winning_turtle = 1 
-  
 
-
-
-
-#create screen 
 
 scr.exitonclick()
