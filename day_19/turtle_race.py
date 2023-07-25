@@ -11,7 +11,7 @@ bet = ''
 end = False
 winning_turtle = ''
 
-scr.textinput(bet, 'What turtle will win?')
+scr.textinput(bet, 'What turtle will win? (Turtle 1 is at the bottom, to Turtle 10 at the top)')
 
 turtle_obj = [None] * 10
 for i in range(10):
@@ -32,7 +32,7 @@ for k in range(25):
       turtle_obj[j].penup()
       
       if turtle_obj[j].xcor() >150 :
-         print(f'Turtle number {j} won!!')
+         print(f'Turtle number {j+1} won!!')
          winning_turtle = j + 1
          #print(turtle_obj[j].xcor())
          end = True
