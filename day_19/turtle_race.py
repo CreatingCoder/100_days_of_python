@@ -40,16 +40,6 @@ for k in range(25):
 
 
 
-    
-
-    
-    
-
-
-
-
-
-
 
 #create screen 
 
