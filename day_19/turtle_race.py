@@ -21,10 +21,17 @@ for i in range(10):
     turtle_obj[i].setposition(-300, pos)
     pos = pos + 60
 
+
 for k in range(25):
   for j in range(10):
       turtle_obj[j].forward(rand.randint(0,40))
-
+     # print(turtle_obj[j].xcor())
+      
+      if turtle_obj[j].xcor() >150 :
+         print(f'Turtle number {turtle_obj[j]} won!!')
+         print(turtle_obj[j].xcor())
+         break
+      
 
 # for ttl in turtle_obj:
 #    if winning_turtle < ttl.pos:
