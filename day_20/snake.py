@@ -48,17 +48,20 @@ def collide(x_snake, y_snake, x_food, y_food):
             
 
     
-   
-food = Turtle()
-food.shape('square')
-food.color('yellow')
-food.penup()
-food.setpos(rand.randint(-299, 299), rand.randint(-299, 299))
+def make_food():
+       
+    food = Turtle()
+    food.shape('square')
+    food.color('yellow')
+    food.penup()
+    food.setpos(rand.randint(-299, 299), rand.randint(-299, 299))
+    return food
 
 
 
+yeet = make_food()
 while run:
-
+    
     t.forward(2)
     scr.onkey(up, "Up")
     scr.onkey(left, "Left")
@@ -72,10 +75,11 @@ while run:
 
     #change to above and below 10
    
-    bool_collide = collide(t.xcor(), t.ycor(), food.xcor(), food.ycor())
+    bool_collide = collide(t.xcor(), t.ycor(), yeet.xcor(), yeet.ycor())
 
     if bool_collide:
-        food.reset()
+        yeet.reset()
+        yeet = make_food()
         score = score + 1
         print(score)
                      
