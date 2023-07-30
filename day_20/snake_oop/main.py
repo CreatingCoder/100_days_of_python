@@ -1,6 +1,9 @@
 from turtle import Turtle, Screen
 from snake import Snake
 import time
+from food import Food
+from random import *
+from scoreboard import Scoreboard
 
 
 
@@ -11,6 +14,8 @@ segments = []
 
 #create new screen
 scr = Screen()
+
+scoreboard = Scoreboard()
 
 #set screen height, width
 scr.setup(600, 600)
@@ -28,6 +33,7 @@ scr.tracer(0)
 scr.listen()
 
 snake = Snake()
+food = Food()
 
 while run:
     scr.update()
@@ -39,8 +45,11 @@ while run:
     scr.onkey(snake.left, 'Left')
     scr.onkey(snake.right, 'Right')
 
-
-
+    #snake collide
+    if snake.head.distance(food) < 15:
+        food.refresh()
+        scoreboard.increase_score()
+        
 
 
 scr.exitonclick()
