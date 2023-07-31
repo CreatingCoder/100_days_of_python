@@ -48,8 +48,21 @@ while run:
     #snake collide
     if snake.head.distance(food) < 15:
         food.refresh()
+        snake.extend()
         scoreboard.increase_score()
-        
+
+    #snake collide with bounds
+    if snake.head.xcor() >= 285 or snake.head.xcor() < -285 or snake.head.ycor() >= 285 or snake.head.ycor() < -285:
+        run = False
+        scoreboard.game_over()
+
+    #snake colldie with tail
+    for seg in snake.segments:
+        if seg == snake.head:
+            pass
+        elif snake.head.distance(seg) < 10:
+            run = False
+            scoreboard.game_over()
 
 
 scr.exitonclick()
