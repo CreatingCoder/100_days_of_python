@@ -5,7 +5,6 @@ import random
 #Turtle is class you want to inherit from
 class Food(Turtle):
 
-
     def __init__(self):
         #call turtle's init method
         super().__init__()
