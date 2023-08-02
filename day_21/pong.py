@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle
 import random as rand
 
 
@@ -9,6 +9,9 @@ class Pong(Turtle):
         self.shape('square')
         self.color('white')
         self.penup()
+        self.speed('slowest')
+        
+       
 
 
     def movement(self):
@@ -23,6 +26,6 @@ class Pong(Turtle):
         #right
         elif random_int == 1:
             self.right(0)
-            self.fd(80)
+            self.fd(90)
             print('right')
         
