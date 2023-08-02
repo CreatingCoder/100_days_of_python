@@ -15,17 +15,24 @@ class Pong(Turtle):
 
 
     def movement(self):
-        random_int = rand.randint(0,1)
-        
+        #random number determines x direction
+        random_x = rand.randint(0,1)
+
+        #random number determines y location
+        random_y = rand.randint(-270,270)
+
+        self.hideturtle()
+        self.sety(random_y)
+
+
         #left
-        if random_int == 0:
+        if random_x == 0:
             self.left(180)
+            self.showturtle()
             self.fd(90)
-            print('left')
 
         #right
-        elif random_int == 1:
+        elif random_x == 1:
             self.right(0)
+            self.showturtle()
             self.fd(90)
-            print('right')
-        
