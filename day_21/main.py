@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 import random as rand
 from pong import Pong
+from player import Player
 import time
 
 scr = Screen()
@@ -10,14 +11,18 @@ scr.setup(800,600)
 scr.listen()
 
 pong = Pong()
+player = Player()
+player.move()
 
 pong.movement()
 
 run = True
-#while run == True:
+while run == True:
     #time.sleep(0.1)
     #scr.update()
-
+    
+    pong.movement()
+    pong.bounds()
 
 
 
@@ -37,4 +42,3 @@ run = True
 
 
 scr.exitonclick()
-
