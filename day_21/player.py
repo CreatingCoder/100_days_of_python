@@ -11,3 +11,7 @@ class Player(Turtle):
         self.penup()
         self.setposition(300, 0)
         self.showturtle()
+
+    def move(self):
+        self.setheading(90)
+        self.fd(90)
