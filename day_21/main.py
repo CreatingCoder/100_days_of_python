@@ -12,7 +12,8 @@ scr.listen()
 
 pong = Pong()
 player = Player()
-player.move()
+
+
 
 pong.movement()
 
@@ -20,6 +21,8 @@ run = True
 while run == True:
     #time.sleep(0.1)
     #scr.update()
+
+    scr.onkey(player.up(), "Up")
     
     pong.movement()
     pong.bounds()
