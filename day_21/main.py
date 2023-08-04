@@ -13,8 +13,6 @@ scr.listen()
 pong = Pong()
 player = Player()
 
-
-
 pong.movement()
 
 run = True
