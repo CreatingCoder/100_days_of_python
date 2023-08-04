@@ -12,6 +12,7 @@ class Player(Turtle):
         self.setposition(300, 0)
         self.showturtle()
 
+    
     def up(self):
         self.setheading(90)
         self.fd(60)
