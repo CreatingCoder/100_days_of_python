@@ -10,3 +10,10 @@ class Paddle(Turtle):
         self.color('white')
         
         self.shapesize(5, 1)
+
+
+    def up(self):
+        self.goto(self.xcor(), self.ycor() + 20)
+
+    def down(self):
+        self.goto(self.xcor(), self.ycor() - 20)
