@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 import random as rand
 from paddle import Paddle
+from ball import Ball
 import time
 
 run = True
@@ -19,21 +20,27 @@ pad1.setposition(350, 0)
 pad2 = Paddle()
 pad2.setposition(-350,0)
 
+ball = Ball()
 
+scr.onkeypress(pad1.up, "Up")
+scr.onkeypress(pad1.down, "Down")
 
-
+scr.onkeypress(pad2.up, "w")
+scr.onkeypress(pad2.down, "s")
 
 while run:
+    time.sleep(0.1)
     scr.update()
+    ball.move()
     
-    
+    if ball.xcor() > 290 or ball.xcor() < -290:
+        print('out x')
 
+    if ball.ycor() > 370:
+        print('out y')
 
-    scr.onkeypress(pad1.up, "Up")
-    scr.onkeypress(pad1.down, "Down")
-
-    scr.onkeypress(pad2.up, "w")
-    scr.onkeypress(pad2.down, "s")
+    if ball.ycor() < -370:
+        print('out y -')
 
 
 
