@@ -1,7 +1,6 @@
 from turtle import Turtle, Screen
 import random as rand
-
-
+from paddle import Paddle
 import time
 
 run = True
@@ -14,12 +13,11 @@ scr.tracer(0)
 scr.listen()
 scr.listen()
 
-pad1 = Turtle()
-pad1.penup()
-pad1.shape('square')
-pad1.color('white')
-pad1.setpos(350,0)
-pad1.shapesize(5, 1)
+pad1 = Paddle()
+pad1.setposition(350, 0)
+
+pad2 = Paddle()
+pad2.setposition(-359,0)
 
 
 def up():
