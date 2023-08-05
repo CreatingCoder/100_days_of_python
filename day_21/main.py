@@ -17,14 +17,10 @@ pad1 = Paddle()
 pad1.setposition(350, 0)
 
 pad2 = Paddle()
-pad2.setposition(-359,0)
+pad2.setposition(-350,0)
 
 
-def up():
-    pad1.goto(pad1.xcor(), pad1.ycor() + 20)
 
-def down():
-    pad1.goto(pad1.xcor(), pad1.ycor() - 20)
 
 
 while run:
@@ -33,8 +29,11 @@ while run:
     
 
 
-    scr.onkeypress(up, "Up")
-    scr.onkeypress(down, "Down")
+    scr.onkeypress(pad1.up, "Up")
+    scr.onkeypress(pad1.down, "Down")
+
+    scr.onkeypress(pad2.up, "w")
+    scr.onkeypress(pad2.down, "s")
 
 
 
