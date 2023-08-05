@@ -1,43 +1,42 @@
 from turtle import Turtle, Screen
 import random as rand
-from pong import Pong
-from player import Player
+
+
 import time
+
+run = True
 
 scr = Screen()
 scr.bgcolor('black')
-scr.setup(800,600)
-#scr.tracer(0)
+scr.setup(800, 600)
+scr.title('Pong')
+scr.tracer(0)
+scr.listen()
 scr.listen()
 
-pong = Pong()
-player = Player()
+pad1 = Turtle()
+pad1.penup()
+pad1.shape('square')
+pad1.color('white')
+pad1.setpos(350,0)
+pad1.shapesize(5, 1)
 
-pong.movement()
 
-run = True
-while run == True:
-    #time.sleep(0.1)
-    #scr.update()
+def up():
+    pad1.goto(pad1.xcor(), pad1.ycor() + 20)
 
-    scr.onkey(player.up(), "Up")
+def down():
+    pad1.goto(pad1.xcor(), pad1.ycor() - 20)
+
+
+while run:
+    scr.update()
     
-    pong.movement()
-    pong.bounds()
+    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    scr.onkeypress(up, "Up")
+    scr.onkeypress(down, "Down")
 
 
 
