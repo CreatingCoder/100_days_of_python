@@ -3,6 +3,11 @@ import random as rand
 from paddle import Paddle
 from ball import Ball
 import time
+from scoreboard import Scoreboard
+
+#scores
+left = 0
+right = 0
 
 run = True
 
@@ -16,13 +21,7 @@ scr.listen()
 
 
 
-score = Turtle()
-score.setposition(0, 270)
-score.hideturtle()
-score.penup()
-score.color('white')
-score.write('SCORE', True, 'center', 'arial')
-
+scrbd = Scoreboard()
 
 
 pad1 = Paddle()
@@ -43,6 +42,7 @@ while run:
     time.sleep(0.1)
     scr.update()
     ball.move()
+
     
     #bounce off walls
     if ball.ycor() > 280 or ball.ycor() < -280:
@@ -54,15 +54,13 @@ while run:
 
     
     if (ball.xcor() > 360):
-        print('Left score + 1')
+        scrbd.add_left()
         ball.reset_pos()
+
 
     if(ball.xcor() < -360 ):
-        print('Right score + 1')
+        scrbd.add_right()
         ball.reset_pos()
-
-
-
 
 
 
