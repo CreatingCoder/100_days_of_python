@@ -27,7 +27,3 @@ class Ball(Turtle):
 
 
 
-
-
-#width 20
-#h 20
