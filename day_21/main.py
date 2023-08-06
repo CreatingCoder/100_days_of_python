@@ -14,6 +14,17 @@ scr.tracer(0)
 scr.listen()
 scr.listen()
 
+
+
+score = Turtle()
+score.setposition(0, 270)
+score.hideturtle()
+score.penup()
+score.color('white')
+score.write('SCORE', True, 'center', 'arial')
+
+
+
 pad1 = Paddle()
 pad1.setposition(350, 0)
 
@@ -33,14 +44,24 @@ while run:
     scr.update()
     ball.move()
     
-    if ball.xcor() > 290 or ball.xcor() < -290:
-        print('out x')
+    #bounce off walls
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
 
-    if ball.ycor() > 370:
-        print('out y')
+    #bounce off paddles
+    if (ball.distance(pad1) < 50 and ball.xcor() > 320) or (ball.distance(pad2) < 50 and ball.xcor() < -320):
+        ball.bounce_x()
 
-    if ball.ycor() < -370:
-        print('out y -')
+    
+    if (ball.xcor() > 360):
+        print('Left score + 1')
+        ball.reset_pos()
+
+    if(ball.xcor() < -360 ):
+        print('Right score + 1')
+        ball.reset_pos()
+
+
 
 
 
