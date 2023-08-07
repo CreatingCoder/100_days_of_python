@@ -15,3 +15,5 @@ class Frog(Turtle):
     def up(self):
         #self.goto(self.xcor() + 90)
         self.forward(20)
+
+        
