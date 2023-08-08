@@ -8,12 +8,10 @@ class Frog(Turtle):
         self.penup()
         self.shape('turtle')
         self.setheading(90)
-        self.setpos(0, -320)
+        self.setpos(0, -300)
         self.color('green')
 
 
     def up(self):
         #self.goto(self.xcor() + 90)
         self.forward(20)
-
-        
