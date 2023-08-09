@@ -1,6 +1,5 @@
 from turtle import Turtle, Screen
 
-
 class Frog(Turtle):
 
     def __init__(self):
