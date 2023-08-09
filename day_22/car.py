@@ -9,7 +9,7 @@ class Car(Turtle):
     def __init__(self):
         super().__init__()
         self.shape('square')
-        #self.y_cor = 
+
         self.setposition(300, rand.randint(-280, 280))
         self.penup()
         self.shapesize(1, 2)
