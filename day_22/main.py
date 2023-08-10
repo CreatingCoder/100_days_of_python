@@ -14,7 +14,6 @@ scr.listen()
 frog = Frog()
 
 
-
 scr.onkeypress(frog.up, 'Up')
 
 
