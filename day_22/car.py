@@ -1,7 +1,7 @@
 from turtle import Turtle, Screen
 import random as rand
 
-COLORS = ['yellow', 'green', 'blue', 'red']
+COLORS = COLORS = ['yellow', 'green', 'blue', 'red']
 
 
 class Car(Turtle):
@@ -19,7 +19,7 @@ class Car(Turtle):
 
     def move_car(self):
         
-        self.forward(rand.uniform(.0, 2.4))
+        self.forward(rand.uniform(.0, 1.4))
 
 
         
