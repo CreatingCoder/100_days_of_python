@@ -15,6 +15,13 @@ scr.listen()
 
 frog = Frog()
 
+game_over = Turtle()
+
+game_over.hideturtle()
+game_over.color("white")
+
+
+
 
 
 
@@ -40,10 +47,13 @@ while run == True:
     
     for cars in list:
           cars.move_car()
-          if cars.pos() == frog.pos():
-            
-            exit()
+          if cars.distance(frog) < 10:
 
+            run = False
+            game_over.write('Game Over', font = ('Arial', 20, 'normal'))
+            game_over.showturtle()
+
+    
 
     
 
