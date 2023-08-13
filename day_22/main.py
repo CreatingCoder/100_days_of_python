@@ -2,9 +2,6 @@ from turtle import Turtle, Screen
 import random as rand
 from frog import Frog
 from car import Car
-from numpy.random import permutation
-
-
 
 scr = Screen()
 scr.tracer(0)
@@ -19,11 +16,8 @@ game_over = Turtle()
 
 game_over.hideturtle()
 game_over.color("white")
-
-
-
-
-
+game_over.penup()
+game_over.setposition(-75,0)
 
 
 scr.onkeypress(frog.up, 'Up')
@@ -35,14 +29,12 @@ for i in range(10):
 
 run = True
 while run == True:
-    x = 1
+    x = rand.randint(0,50)
     scr.update()
 
     
-    #if x % 3 == 1.5:
-          #list.append(Car())
-    
-          
+    if x  == 0:
+          list.append(Car())      
           
     
     for cars in list:
@@ -53,35 +45,10 @@ while run == True:
             game_over.write('Game Over', font = ('Arial', 20, 'normal'))
             game_over.showturtle()
 
-    
 
-    
-
-    x = x+1
-        
-
-    
-
-    
-    
-
-    
-
-
-
-    
-        
-    
-
-
-    
-
-
-
-
-
-
-
+          if frog.ycor() >= 280 and run == True:
+            game_over.write('You won!', font = ('Arial', 20, 'normal'))
+            game_over.showturtle()
 
 
 scr.exitonclick()
