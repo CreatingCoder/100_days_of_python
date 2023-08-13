@@ -20,7 +20,6 @@ scr.listen()
 scr.listen()
 
 
-
 scrbd = Scoreboard()
 
 
