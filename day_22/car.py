@@ -22,4 +22,3 @@ class Car(Turtle):
         self.forward(rand.uniform(.0, 1.4))
 
 
-        
