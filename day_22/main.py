@@ -24,8 +24,7 @@ scr.onkeypress(frog.up, 'Up')
 
 list = []
 for i in range(10):
-        list.append(Car())
-        
+        list.append(Car())      
 
 run = True
 while run == True:
