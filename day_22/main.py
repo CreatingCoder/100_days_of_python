@@ -9,7 +9,6 @@ scr.screensize(600,600)
 scr.bgcolor('black')
 scr.listen()
 
-
 frog = Frog()
 
 game_over = Turtle()
@@ -43,7 +42,6 @@ while run == True:
             run = False
             game_over.write('Game Over', font = ('Arial', 20, 'normal'))
             game_over.showturtle()
-
 
           if frog.ycor() >= 280 and run == True:
             game_over.write('You won!', font = ('Arial', 20, 'normal'))
