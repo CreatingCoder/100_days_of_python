@@ -16,7 +16,6 @@ class Car(Turtle):
         self.color(COLORS[rand.randint(0, len(COLORS)-1)])
         self.setheading(180)
 
-
     def move_car(self):
         
         self.forward(rand.uniform(.0, 1.4))
