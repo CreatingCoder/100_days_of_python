@@ -62,5 +62,4 @@ while run:
         ball.reset_pos()
 
 
-
 scr.exitonclick()
