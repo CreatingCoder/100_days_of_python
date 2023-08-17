@@ -18,7 +18,6 @@ game_over.color("white")
 game_over.penup()
 game_over.setposition(-75,0)
 
-
 scr.onkeypress(frog.up, 'Up')
 
 list = []
