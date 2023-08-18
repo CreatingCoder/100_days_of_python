@@ -7,7 +7,6 @@ def coffee_maker():
     menu_dict = coffee_dict.MENU
     run = True
 
-
     while (run):
         
         userinput = input('What would you like?  Please enter: (espresso, latte, or cappucino): ').lower()
@@ -24,7 +23,6 @@ def coffee_maker():
             print(f"Coffee: {re_dict['coffee']}g")
             print(f"Coffee: ${re_dict['money']}")
 
-
         if(userinput == 'espresso'):
             dict = make_espresso(re_dict, menu_dict, userinput)
 
@@ -33,7 +31,6 @@ def coffee_maker():
         
         if(userinput == 'cappuccino'):
             dict = make_cappuccino(re_dict, menu_dict, userinput)
-
 
 def make_espresso(edict, mdict, user_order):
 
