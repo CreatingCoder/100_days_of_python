@@ -36,7 +36,6 @@ def blackjack():
 
 def run(card_count, players_cards, comp_shown_card):
     
-
     print(f'\nYour cards are: {players_cards[:card_count]}')
     print(f"The computer's first card is {comp_shown_card}\n")
     card_count = card_count + 1 
