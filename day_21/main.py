@@ -39,8 +39,7 @@ while run:
     time.sleep(0.1)
     scr.update()
     ball.move()
-
-    
+  
     #bounce off walls
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
