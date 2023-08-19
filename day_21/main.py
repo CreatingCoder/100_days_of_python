@@ -19,9 +19,7 @@ scr.tracer(0)
 scr.listen()
 scr.listen()
 
-
 scrbd = Scoreboard()
-
 
 pad1 = Paddle()
 pad1.setposition(350, 0)
