@@ -6,7 +6,6 @@ from random import *
 from scoreboard import Scoreboard
 
 
-
 #bool for while loop running the game
 run = True
 
