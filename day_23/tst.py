@@ -1,1 +1,1 @@
-
+with file.open()
