@@ -14,7 +14,6 @@ class Snake:
         self.create_snake()
         self.head = self.segments[0]
 
-
     def create_snake(self):
         for square in STARTING_POS:
             self.add_segment(square)
