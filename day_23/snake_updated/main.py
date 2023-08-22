@@ -5,7 +5,6 @@ from food import Food
 from random import *
 from scoreboard import Scoreboard
 
-
 #bool for while loop running the game
 run = True
 
@@ -56,7 +55,6 @@ while run:
         snake.reset()
        
         
-
     #snake colldie with tail
     for seg in snake.segments:
         if seg == snake.head:
