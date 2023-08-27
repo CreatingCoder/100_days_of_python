@@ -14,7 +14,6 @@ position = 'Software Engineer'
 # to_block = input('Please enter the title/name the letter is being sent to: ')
 # position = input('Please enter the job position: ')
 
-
 doc = Document()
 
 #\n {address_3}
