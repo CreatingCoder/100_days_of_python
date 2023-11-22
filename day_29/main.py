@@ -1,5 +1,20 @@
 from tkinter import *
 
+#################3
+
+def gen_pass():
+    print('Hello World')
+
+def add():
+    print('Add')
+    file = open('yeet.txt', 'w+')
+
+
+
+##################
+
+
+
 window = Tk()
 window.title('Password Manager')
 window.config(padx=20, pady=20)
@@ -15,12 +30,40 @@ canvas.create_image(150,112, image=lock_img)
 canvas.grid(column=4, row=0, pady=40, padx = 15)
 
 #
-L1 = Label(window, text="User Name")
+L1 = Label(window, text="Website")
 L1.grid(column=3, row=2,)
 
-
 E1 = Entry(window, bd =5)
-E1.grid(column=4, row=2,)
+E1.grid(column=4, row=2)
+
+
+L2 = Label(window, text="Email/Username")
+L2.grid(column=3, row=3,)
+
+E2 = Entry(window, bd =5)
+E2.grid(column=4, row=3)
+
+
+L2 = Label(window, text="Password")
+L2.grid(column=3, row=4,)
+
+E2 = Entry(window, bd =5)
+E2.grid(column=4, row=4)
+
+gen_pass = Button(text='Generate Password', command = gen_pass)
+gen_pass.grid(column=4,row=5)
+
+add = Button(text='Add', command = add)
+add.grid(column=4,row=6)
+
+
+
+
+
+
+
+
+
 
 
 
