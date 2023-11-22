@@ -7,18 +7,26 @@ def gen_pass():
 
 def add():
     print('Add')
-    file = open('yeet.txt', 'w+')
+    global entry, entry2
+    entry = E1.get()
+    entry2 = E2.get()
+    
+    file = open('yeet.txt', 'a')
+    file.write(entry + '  |  ' + entry2 + '/n')
+    
+
+    file.close()
 
 
 
 ##################
 
-
-
 window = Tk()
 window.title('Password Manager')
 window.config(padx=20, pady=20)
 window.geometry("500x800")
+
+#website_var = 
 
 
 canvas = Canvas(width=300, height=300, bg='gray', highlightthickness= 0)
