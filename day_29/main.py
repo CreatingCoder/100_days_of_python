@@ -43,11 +43,7 @@ window.title('Password Manager')
 window.config(padx=20, pady=20)
 window.geometry("500x800")
 
-#website_var = 
-
-
 canvas = Canvas(width=300, height=300, bg='gray', highlightthickness= 0)
-
 
 #Image
 lock_img = PhotoImage(file="lock.gif")
@@ -80,20 +76,6 @@ gen_pass.grid(column=4,row=5)
 
 add = Button(text='Add', command = add)
 add.grid(column=4,row=6)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 window.mainloop()
