@@ -15,22 +15,18 @@ def gen_pass():
     E3.insert(0, generated_pass)
 
 def add():
-    print('Add')
     global entry
     global entry2
     entry = E1.get()
     entry2 = E2.get()
     entry3 = E3.get()
-
-    file = open('yeet.txt', 'a')
+    file = open('passwords.txt', 'a')
 
     #if statement to stop empty additions
     if entry and entry2 and entry3 != '': 
         file.write(entry + '  |  ' + entry2  +'  |  ' + entry3 + '\n')
-    
+        
     file.close()
-
-
 
 ##################
 
