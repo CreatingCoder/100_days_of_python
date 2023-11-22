@@ -2,11 +2,9 @@ from tkinter import *
 import random as rand
 
 alphabet = "!#$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
-
 password_length = 12
 
-
-#################
+################# FUNCTIONS ##################
 
 def gen_pass():
     global generated_pass
@@ -14,9 +12,7 @@ def gen_pass():
     for i in range(0, password_length):
         random_num = rand.randint(0,92)
         generated_pass = generated_pass + alphabet[random_num]
-    #print(generated_pass)
     E3.insert(0, generated_pass)
-
 
 def add():
     print('Add')
