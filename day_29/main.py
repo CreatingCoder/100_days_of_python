@@ -9,10 +9,13 @@ password_length = 12
 #################
 
 def gen_pass():
-    for i in range(0,password_length):
-        i = i +1
-        # global password_str
-        password_str = password_str + alphabet[rand.randint(0,92)]
+    global generated_pass
+    generated_pass = ''
+    for i in range(0, password_length):
+        random_num = rand.randint(0,92)
+        generated_pass = generated_pass + alphabet[random_num]
+    #print(generated_pass)
+    E3.insert(0, generated_pass)
 
 
 def add():
@@ -21,9 +24,13 @@ def add():
     global entry2
     entry = E1.get()
     entry2 = E2.get()
-    
+    entry3 = E3.get()
+
     file = open('yeet.txt', 'a')
-    file.write(entry + '  |  ' + entry2 + '\n')
+
+    #if statement to stop empty additions
+    if entry and entry2 and entry3 != '': 
+        file.write(entry + '  |  ' + entry2  +'  |  ' + entry3 + '\n')
     
     file.close()
 
