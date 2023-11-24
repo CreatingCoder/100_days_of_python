@@ -1,5 +1,6 @@
 from tkinter import *
 import random as rand
+import json
 
 alphabet = "!#$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 password_length = 12
@@ -20,13 +21,13 @@ def add():
     entry = E1.get()
     entry2 = E2.get()
     entry3 = E3.get()
-    file = open('passwords.txt', 'a')
 
-    #if statement to stop empty additions
-    if entry and entry2 and entry3 != '': 
-        file.write(entry + '  |  ' + entry2  +'  |  ' + entry3 + '\n')
-        
-    file.close()
+
+
+    json_file = json.dumps(entry +'   |   '+ entry2 + '   |   ' + entry3)
+
+    with open('sample.json', 'w') as outfile:
+        outfile.write(json_file)
 
 ##################
 
