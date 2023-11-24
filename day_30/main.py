@@ -7,6 +7,9 @@ password_length = 12
 
 ################# FUNCTIONS ##################
 
+
+
+
 def gen_pass():
     global generated_pass
     generated_pass = ''
@@ -23,11 +26,27 @@ def add():
     entry3 = E3.get()
 
 
+    if entry !='' and entry2 != '' and entry3 != '':
+        json_file = json.dumps(entry +'   |   '+ entry2 + '   |   ' + entry3)
 
-    json_file = json.dumps(entry +'   |   '+ entry2 + '   |   ' + entry3)
+        with open('passwords.json', 'w') as outfile:
+            outfile.write(json_file)
 
-    with open('sample.json', 'w') as outfile:
-        outfile.write(json_file)
+
+def search():
+    print('search function called')
+
+    json_file = open('passwords.json')
+
+    #type str
+    jdata = json.load(json_file)
+
+    if('facebook' in jdata):
+        print('found facebook')
+
+
+                
+    #TODO: open and search json file 
 
 ##################
 
@@ -49,6 +68,9 @@ L1.grid(column=3, row=2,)
 
 E1 = Entry(window, bd =5)
 E1.grid(column=4, row=2)
+
+search = Button(text='Search', command = search)
+search.grid(column=5,row=2)
 
 
 L2 = Label(window, text="Email/Username")
