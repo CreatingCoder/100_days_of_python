@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import random as rand
 import json
 
@@ -6,9 +7,6 @@ alphabet = "!#$%&\()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcde
 password_length = 12
 
 ################# FUNCTIONS ##################
-
-
-
 
 def gen_pass():
     global generated_pass
@@ -19,18 +17,51 @@ def gen_pass():
     E3.insert(0, generated_pass)
 
 def add():
+    #do I need?
     global entry
     global entry2
+    global dict 
+
     entry = E1.get()
     entry2 = E2.get()
     entry3 = E3.get()
 
+    new_data = {
+        entry: {
+            "email": entry2,
+            "password": entry3,
 
-    if entry !='' and entry2 != '' and entry3 != '':
-        json_file = json.dumps(entry +'   |   '+ entry2 + '   |   ' + entry3)
+        }
 
-        with open('passwords.json', 'w') as outfile:
-            outfile.write(json_file)
+    }
+
+    if len(entry) == 0 or len(entry2) == 0 or len(entry3) == 0:
+        messagebox.showinfo('Empty Block', 'Please fill out the necessary boxes')
+    
+    elif entry !='' and entry2 != '' and entry3 != '':
+        try:
+            with open('passwords.json', 'r') as json_file:
+                data = json.load(json_file)
+                
+
+        except FileNotFoundError:
+            with open('passwords.json', 'w') as json_file:
+                json.dump(new_data, json_file, indent = 4)
+
+            
+        else:
+            data.update(new_data)
+
+            with open("passwords.json", "w") as json_file:
+                json.dump(data, json_file, indent = 4)
+
+        finally:
+            E1.delete(0,END)
+            E2.delete(0,END)
+            E3.delete(0,END)
+
+    
+
 
 
 def search():
