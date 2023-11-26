@@ -66,17 +66,31 @@ def add():
 
 def search():
     print('search function called')
-
+    website = E1.get()
     json_file = open('passwords.json')
 
     #type str
     jdata = json.load(json_file)
 
-    if('facebook' in jdata):
-        print('found facebook')
 
+    #get data from E1 (if there is data) Try-except
 
-                
+    try:
+        if(website in jdata):
+            email = jdata[website]['email']
+            password = jdata[website]['password']
+            messagebox.showinfo(title=website, message=f'Email: {email} \nPassword: {password}')
+
+        else:
+            messagebox.showinfo('No data', 'Could not find data!')
+
+    except:
+        if len(entry) ==0:
+            messagebox.showinfo('Empty Box', 'Please fill out the necessary box')
+        
+        
+
+ 
     #TODO: open and search json file 
 
 ##################
