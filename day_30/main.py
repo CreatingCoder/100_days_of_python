@@ -60,20 +60,17 @@ def add():
             E2.delete(0,END)
             E3.delete(0,END)
 
-    
-
 
 
 def search():
     print('search function called')
     website = E1.get()
-    json_file = open('passwords.json')
-
+    try:
+        json_file = open('passwords.json')
+    except:
+        messagebox.showinfo('No data', 'No data provided yet!')
     #type str
     jdata = json.load(json_file)
-
-
-    #get data from E1 (if there is data) Try-except
 
     try:
         if(website in jdata):
@@ -88,11 +85,6 @@ def search():
         if len(entry) ==0:
             messagebox.showinfo('Empty Box', 'Please fill out the necessary box')
         
-        
-
- 
-    #TODO: open and search json file 
-
 ##################
 
 window = Tk()
