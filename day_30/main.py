@@ -47,7 +47,6 @@ def add():
         except FileNotFoundError:
             with open('passwords.json', 'w') as json_file:
                 json.dump(new_data, json_file, indent = 4)
-
             
         else:
             data.update(new_data)
