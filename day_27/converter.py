@@ -33,9 +33,4 @@ button.grid(column=2,row=2)
 
 
 
-
-
-
-
-
 window.mainloop()
