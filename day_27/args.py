@@ -5,4 +5,3 @@ def add(*args):
     return sum
 
 print(add(3,5,6))
-
